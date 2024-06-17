@@ -23,6 +23,11 @@ function setup() {
   textSize(32);
   textFont(coreSansFont);
   fill('#15A3EF');
+  
+  //tu się dzieje magia czcionek ;)
+  let fontFace = new FontFace('ButtonFont', `url(Montreal.ttf`);
+  document.fonts.add(fontFace);
+  
 }
 
 function draw() {
@@ -83,7 +88,7 @@ function createButtonAfterText() {
   button.style('margin', '4px 2px');
   button.style('cursor', 'pointer');
   button.style('border-radius', '12px');
-  button.style('font-family', 'Core Sans C85 Heavy'); // Ustaw czcionkę na przycisku
+  button.style('font-family', 'ButtonFont'); // Ustaw czcionkę na przycisku
 
   // Zmiana koloru po najechaniu
   button.mouseOver(() => button.style('background-color', '#3EB3F2'));
