@@ -53,7 +53,7 @@ function draw() {
   
   if(chairRain){
     t++;
-    if(t == 500){
+    if(t == 400){
       print(t);
    window.open("https://robertvents.github.io/sof-robert/","_self");
   }
