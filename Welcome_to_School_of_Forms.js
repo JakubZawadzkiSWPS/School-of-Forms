@@ -7,6 +7,8 @@ let currentTextIndex = 0;
 let textDisplayInterval = 2000; // Opóźnienie między wyświetlaniem kolejnych linijek tekstu
 let lastTextChangeTime = 0;
 let showButton = false;
+let t = 0;
+let chairRain = false;
 
 function preload() {
   // Załaduj lokalne obrazy krzeseł
@@ -46,6 +48,15 @@ function draw() {
   if (currentTextIndex >= texts.length && !showButton) {
     showButton = true;
     createButtonAfterText();
+  }
+  
+  
+  if(chairRain){
+    t++;
+    if(t == 500){
+      print(t);
+   window.open("https://robertvents.github.io/sof-robert/","_self");
+  }
   }
 
   // Aktualizacja i rysowanie krzeseł
@@ -118,4 +129,5 @@ function buttonPressed() {
   setInterval(() => {
     chairs.push(new Chair(random(width), -50, random(chairImgs)));
   }, 100);
+  chairRain = true;
 }
